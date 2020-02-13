@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" />
+    <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <!--Top Row-->
+    <div class="container-fluid">
+        <div class="row" id="toprow">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 text-center" id="viewhighscores">View Highscores</div>
+            <div class="col-md-4"></div>
+            <div class="col-md-2 text-center" id="thetime">
+                Time : <span id="timer">75</span>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+ <!--Start Quiz page Container-->
+        <div id="start" class="col-md-12 text-center m-2 align-middle">
+            <h1>Coding Quiz Homework</h1>
+            <span>Start the fun fact quiz by clicking the button below</span>
+            <br>
+            <button type="button" class="btn btn-primary btn-lg m-3" id="start">Start Quiz</button>
+        </div>
+
+        <div id="quiz" style="display: none;">
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8 text-center">
+                    <div id="title">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8">
+                    <div id="choices">
+                        <div class="choice btn btn-primary btn-sm m-1" id="A" onclick="checkAnswer('A')">A</div>
+                        <br>
+                        <div class="choice btn btn-primary btn-sm m-1" id="B" onclick="checkAnswer('B')">B</div>
+                        <br>
+                        <div class="choice btn btn-primary btn-sm m-1" id="C" onclick="checkAnswer('C')">C</div>
+                        <br>
+                        <div class="choice btn btn-primary btn-sm m-1" id="D" onclick="checkAnswer('D')">D</div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+<!--Completed Score Container-->
+        <div id="scoreContainer" style="display: none;" class="text-center m-2">
+            <div class="row mx-auto">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <h2>You have completed the quiz!</h2>
+                    <br>
+                    <p>Your final score is: <span id="finalscore"></span></p>
+                    <br>
+                    <form class="form-inline justify-content-center align-items-center">
+                        <div class="form-group mx-sm-3 mb-2 justify-content-center align-items-center">
+                            <input class="form-control text-center justify-content-center align-items-center"
+                                id="initials" placeholder="Enter Your Initials Here">
+                        </div>
+                        <button id="addinitials" type="submit"
+                            class="btn btn-primary mb-2 justify-content-center align-items-center">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+        </div>
+
+<!-- Highscore Container-->
+        <div id="highscores" style="display: none;" class="text-center p-10">
+            <div class="row">
+
+                <div class="col-md-2">
+
+                </div>
+
+                <div class="col-md-8">
+                    <h2>Highscores</h2><br><br>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <div id="highscoreslist">
+
+                    </div><br><br>
+                    <button id="clearhighscores-button" type="submit" class="btn btn-primary mb-2">Clear High
+                        Score</button>
+                    <button id="goback-button" onclick="location.reload();" type="submit"
+                        class="btn btn-primary mb-2">Go
+                        Back</button>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+
+        <div id="rightorwrong" class="text-center">
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
