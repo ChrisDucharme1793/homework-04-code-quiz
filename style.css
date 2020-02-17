@@ -1,12 +1,15 @@
+
+
+
 #highscoreslist {
-  background-color: #007bff;
-  color: white;
+  background-color: rgb(70, 0, 128);
+  color: gold;
 }
 
 #toprow {
-  background-color:#007bff;
+  background-color:rgb(70, 0, 128);
   padding: 12px;
-  color: white;
+  color: gold;
 }
 
 #title {
@@ -15,10 +18,38 @@
 
 #rightorwrong {
   font-style: italic;
-  color: silver;
-  font-size: 50px;
+  color: black;
+  font-size: 90px;
 }
 
 #highscores {
   padding: 25px 0px 15px 0px;
+  background-color: gold;
+ 
+  
+}
+
+body{
+   background-image: url(https://wallpapercave.com/wp/TZnZlya.jpg);
+background-repeat: no-repeat;
+height: 100%;
+width: 100%;
+background-size: cover;
+margin-bottom: 200px;
+position: relative;
+color: black;
+}
+
+#start{
+  background-color: gold;
+
+}
+
+#quiz{
+  background-color:gold;
+
+}
+
+#scoreContainer{
+  background-color:gold;
 }

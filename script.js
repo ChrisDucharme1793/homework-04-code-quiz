@@ -8,43 +8,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 var questions = [
   {
-      questionTitle: "After which animal are the Canary Islands named?",
-      choice1: "cats",
-      choice2: "canaries",
-      choice3: "dogs",
-      choice4: "beetles",
+      questionTitle: "What is the general name given to organizations that put together floats for parades and/or balls",
+      choice1: "Drunks",
+      choice2: "Cajuns",
+      choice3: "Krewes",
+      choice4: "Creoles",
       correct: "C"
   },
   {
-      questionTitle: "The Vatican bank has the only ATM in the world that allows users to do what?",
-      choice1: "Scroll style receipt",
-      choice2: "Gold and Silver is currency",
-      choice3: "perform transactions in latin",
-      choice4: "jesus is on the bills",
+      questionTitle: "What traditional item is found inside of a festive King Cake",
+      choice1: "A King",
+      choice2: "Fifth of Bourbon",
+      choice3: "A Baby",
+      choice4: "Your lack of dignity",
       correct: "C"
   },
   {
-      questionTitle: "What do you call a group of unicorns?",
-      choice1: "pokies",
-      choice2: "herd of rainbows",
-      choice3: "a horny herd",
-      choice4: "A blessing",
+      questionTitle: "In Ireland, England, Australia, New Zealand, and Canada, people celebrate Mardi Gras by a different name, what do they call it?",
+      choice1: "Boxing Day",
+      choice2: "Window Licker Day",
+      choice3: "Rage Day",
+      choice4: "Pancake Day",
       correct: "D"
   },
   {
-      questionTitle: "What is a camel hair brush made from?",
-      choice1: "camel",
-      choice2: "sheep",
-      choice3: "squirrel",
-      choice4: "horse",
+      questionTitle: "What do the colors of Mardi Gras stand for? Green is for _________, gold means_________and purple symbolizes ___________.",
+      choice1: "Bourbon, Whiskey, and Moonshine",
+      choice2: "New Orleans, Baton Rouge and Lafayette",
+      choice3: "Faith, Power and Justice",
+      choice4: "TOO DRUNK TO REMEMBER",
       correct: "C"
   },
   {
-      questionTitle: "In which month does the German festival of Oktoberfest mostly take place?",
-      choice1: "july",
-      choice2: "august",
-      choice3: "october",
-      choice4: "september",
+      questionTitle: "It is illegal to ride a float without one of these in New Orleans",
+      choice1: "Beer/Alchols",
+      choice2: "Feather bow",
+      choice3: "An Accent",
+      choice4: "A Mask",
       correct: "D"
   }
 ]
@@ -61,13 +61,7 @@ var choice1 = document.querySelector("#A");
 var choice2 = document.querySelector("#B");
 var choice3 = document.querySelector("#C");
 var choice4 = document.querySelector("#D");
-var correctIncorrect = document.querySelector("#rightorwrong");
-var addInitials = document.querySelector("#addinitials");
-var highScores = document.querySelector('#highscores');
-var clearHighscores = document.querySelector('#clearhighscores-button');
-var goBack = document.querySelector('#goback-button');
-var topRow = document.querySelector('#toprow');
-var highScoresArray;
+
 
 
 var lastQuestionIndex = questions.length - 1;
@@ -100,7 +94,7 @@ function myTimer() {
 
 
 //Start Quiz Button
-start.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
   start.style.display = "none";
@@ -168,71 +162,4 @@ function wrongAnswer() {
   }
 
 
-  addInitials.addEventListener("click", function(event) {
-      event.preventDefault();
-    
-      var initials = document.querySelector("#initials").value;
-      
-      if (initials === "") {
-        alert("Initials cannot be blank");
-
-      } else {
-
-        localStorage.setItem("initials", initials);
-        localStorage.setItem("score", score);
-        
-        showHighscores();
-      }
-      console.log(initials);
-      console.log(score);
-
-    });
-
-//Highscore Page
-    function showHighscores() {
-      quiz.style.display = "none";
-      scoreContainer.style.display = "none";
-      thetime.style.display = "none";
-      viewHighscores.style.display = "none";
-      start.style.display = "none";
-      topRow.style.display = "none";
-      highScores.style.display = "block";
-
-      
-      var initials = (localStorage.getItem("initials"));
-      var score = (localStorage.getItem("score"));
-
-      console.log(initials);
-      console.log(score);
-
-      if (initials === null) {
-          console.log('nothing here');
-
-       
-          document.querySelector('#highscoreslist').append(" No Highscores Yet! ");
-        } else {
-             document.querySelector('#highscoreslist').append(initials + "   =    Score: ", + score);
-             
-        }
-    }
-
-  highScoresArray.push("initials", "score");
-
-    clearHighscores.addEventListener("click", function(event) {
-      localStorage.clear();
-      document.getElementById("highscoreslist").innerHTML = "";
-
-    });
-
-    goBack.addEventListener("click", function(event) {
-      event.preventDefault();
-      showQuestion()
-    
-   
-    });
-
-    viewHighscores.addEventListener("click", function(event) {
-          showHighscores()
-               
-   
-    });
+ 
