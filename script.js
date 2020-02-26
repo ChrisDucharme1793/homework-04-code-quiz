@@ -137,7 +137,7 @@ function showScore(){
   document.getElementById('finalscore').innerHTML = score;
 }
 
-//remove after is not working *****NOW IT IS MUTHA FUCKA
+
 function correctAnswer() {
   var removeAfter = 0;
       document.querySelector('#rightorwrong').innerHTML = "Right!";
@@ -149,7 +149,7 @@ function correctAnswer() {
       })(removeAfter);
   }
 
-///remove after is not working *****NOW IT IS MUTHA FUCKA
+
 function wrongAnswer() {
   var removeAfter = 0;
       document.querySelector('#rightorwrong').innerHTML = "Wrong!";
