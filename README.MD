@@ -1,4 +1,8 @@
-Working on setting up repo
+GitHub Pages Link:
+ https://chrisducharme1793.github.io/homework-04-code-quiz/ 
+
+
+Homework Instructions:
 
 # 04 Web APIs: Code Quiz
 
