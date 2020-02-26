@@ -44,7 +44,7 @@ function showHighscores() {
   highScoresArray = JSON.parse(localStorage.getItem("highscoreList")) || [];
   console.log(highScoresArray);
   highScoresArray.forEach(function(highScore) {
-    // DUSTIN OR DAVID WHY DO THIS WORK IN JQUERY BUT NOT JS WHAT WOULD BE A EQULIVALENT IN JS
+   
     $('#highscoreslist').append(highScore.initials + "   =    Score: ", + highScore.score +"<br>");
   })
 }
