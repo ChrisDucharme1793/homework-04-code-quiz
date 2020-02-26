@@ -1,5 +1,3 @@
-//Not sure if i need it but i included the ready function/event
-
 document.addEventListener("DOMContentLoaded", function(event) { 
   //do work
 })
