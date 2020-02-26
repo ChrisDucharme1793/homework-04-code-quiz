@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
-  //do work
+
 })
 
 //Questions for game
